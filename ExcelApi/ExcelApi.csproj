@@ -7,7 +7,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="10.0.9" />
+	  <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="10.0.0" />
+	  <PackageReference Include="Microsoft.OpenApi" Version="2.7.5" />
+    <!-- Microsoft.AspNetCore.OpenApi removed due to source-generator incompatibility with Microsoft.OpenApi versions available -->
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="10.0.9" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="10.0.9">
       <PrivateAssets>all</PrivateAssets>
@@ -18,6 +20,7 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
+    <!-- Microsoft.OpenApi left at default via transitive packages; explicit reference removed -->
     <PackageReference Include="Scalar.AspNetCore" Version="2.16.10" />
   </ItemGroup>
 
